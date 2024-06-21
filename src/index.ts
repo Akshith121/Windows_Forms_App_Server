@@ -4,7 +4,7 @@ import router from './routes/formRouter';
 const app = express();
 const PORT = 3000;
 
-app.use('/', router);
+app.use('/api/v1', router);
 
 app.listen(PORT, () => {
     console.log("listening!");
