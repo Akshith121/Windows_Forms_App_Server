@@ -124,7 +124,7 @@ router.put('/update', (req, res) => {
             fs.writeFile('./db.json', JSON.stringify(forms), 'utf-8', (err) => {
                 return err;
             })
-            return res.status(201).json({msg: "updated successfully!", formId: forms.length});
+            return res.status(201).json({msg: "updated successfully!"});
         })
     }catch(err){
         console.log(err);
@@ -152,7 +152,7 @@ router.delete('/delete', (req, res) => {
             fs.writeFile('./db.json', JSON.stringify(newForms), 'utf-8', (err) => {
                 return err;
             })
-            return res.status(201).json({msg: "deleted successfully!"});
+            return res.status(200).json({msg: "deleted successfully!"});
         })
     }catch(err){
         console.log(err);
